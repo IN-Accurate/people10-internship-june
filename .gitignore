@@ -1,0 +1,8 @@
+# Ignore node_modules directories at any level
+**/node_modules/
+
+# Ignore all .env files at any level
+**/*.env
+
+# Ignore all testdata.json files at any level
+**/testdata.json
