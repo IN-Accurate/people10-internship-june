@@ -11,6 +11,10 @@ class ResultPage extends Page {
     get flashAlert () {
         return $('h1');
     }
+
+    async takeScreenShot () {
+        await browser.saveScreenshot('./result.png');
+    }
 }
 
 module.exports = new ResultPage();

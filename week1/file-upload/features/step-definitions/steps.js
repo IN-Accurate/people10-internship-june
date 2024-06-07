@@ -22,3 +22,9 @@ Then(/^I can see a confimation message in the results page$/, async() => {
 });
 
 
+Then(/^I should be able to take a screenshot$/, async() => {
+	await ResultPage.takeScreenShot();
+});
+
+
+

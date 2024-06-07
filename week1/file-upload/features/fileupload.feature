@@ -5,3 +5,4 @@ Feature: Upload a file
     Given I am on the upload page
     When I upload a file and click submit file.
     Then I can see a confimation message in the results page
+    And I should be able to take a screenshot
