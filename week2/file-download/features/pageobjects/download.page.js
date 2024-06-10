@@ -21,7 +21,6 @@ class DownloadPage extends Page {
         await browser.pause(14000);
         await (await this.submitBtn).waitForClickable();
         await (await this.submitBtn).click();
-        await browser.pause(14000);
 
     }
 }
