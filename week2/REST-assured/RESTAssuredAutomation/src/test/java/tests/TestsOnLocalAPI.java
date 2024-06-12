@@ -1,12 +1,20 @@
 package tests;
 
 import org.testng.annotations.Test;
+
 import static io.restassured.RestAssured.*;
+
+import io.restassured.http.ContentType;
+import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import java.lang.reflect.Type;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.Scanner;
+
 import tests.User;
 public class TestsOnLocalAPI {
 	
@@ -16,7 +24,8 @@ public class TestsOnLocalAPI {
 		
 		baseURI = "http://localhost:3000";
 		
-		Response response=given().
+		Response response=
+		given().
 		get("/users").
 		then().
 		statusCode(200).
@@ -32,5 +41,72 @@ public class TestsOnLocalAPI {
 		for(User user:users) {
 			  System.out.println("First Name: " + user.getFirstName() + ", Last Name: " + user.getLastName());
 		}
+	}
+	
+	
+	public void postRequest(int numberOfUsers,int i) {
+
+		Scanner scanner = new Scanner(System.in);
+		Map<String,Object> map = new HashMap<String,Object>();
+		System.out.println("Enter first name: ");
+		String first_name = scanner.nextLine();
+		System.out.println("Enter last name: ");
+		String last_name = scanner.nextLine();
+		System.out.println("Enter subject id: ");
+		String subject_id = scanner.nextLine();
+		map.put("firstName", first_name);
+		map.put("lastName",last_name);
+		map.put("subjectId",subject_id);
+		map.put("id",numberOfUsers+i+1);
+		
+		Gson gson = new Gson();
+        String requestBody = gson.toJson(map);
+        
+        System.out.println(requestBody);
+		
+		given()
+		.header("content-type","application/json")
+		.contentType(ContentType.JSON)
+		.accept(ContentType.JSON)
+		.body(requestBody)
+		.when()
+		.post("/users")
+		.then()
+		.statusCode(201);
+	}
+	
+	@Test
+	public void postTest() {
+		
+		baseURI = "http://localhost:3000";
+		
+		Response response=
+		given().
+		get("/users").
+		then().
+		statusCode(200).
+		extract().
+		response();
+
+		String jsonResponse = response.asString();
+		JsonPath jsonPath = new JsonPath(jsonResponse);
+		int numberOfUsers = jsonPath.getList("$").size();
+		
+		
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Enter the number of users to be added: ");
+		int numberOfInputs = scanner.nextInt();
+
+		int i=0;
+		
+		while(i<numberOfInputs) {
+		
+		postRequest(numberOfUsers,i);
+		i++;
+		
+		}
+		
+		scanner.close();
+		
 	}
 }

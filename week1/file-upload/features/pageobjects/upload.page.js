@@ -22,7 +22,7 @@ class UploadPage extends Page {
         
         let uploadInput = await this.uploadFileInput;
         await uploadInput.waitForExist();
-        await uploadInput.addValue('C:/Users/P10/Downloads/test-plan-template.docx')
+        await uploadInput.addValue('C:/Users/P10/Downloads/testcase.pdf')
         await browser.pause(4000)
 
         let uploadButton = await this.uploadFileButton;
