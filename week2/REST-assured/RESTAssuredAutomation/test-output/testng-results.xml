@@ -2,19 +2,19 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-06-12T12:45:16 IST" name="Default suite" finished-at="2024-06-12T12:45:33 IST" duration-ms="16955">
+  <suite started-at="2024-06-12T14:00:51 IST" name="Default suite" finished-at="2024-06-12T14:01:04 IST" duration-ms="13518">
     <groups>
     </groups>
-    <test started-at="2024-06-12T12:45:16 IST" name="Default test" finished-at="2024-06-12T12:45:33 IST" duration-ms="16955">
+    <test started-at="2024-06-12T14:00:51 IST" name="Default test" finished-at="2024-06-12T14:01:04 IST" duration-ms="13518">
       <class name="tests.TestsOnLocalAPI">
-        <test-method signature="getTest()[pri:0, instance:tests.TestsOnLocalAPI@437da279]" started-at="2024-06-12T12:45:16 IST" name="getTest" finished-at="2024-06-12T12:45:18 IST" duration-ms="2590" status="PASS">
+        <test-method signature="deleteTest()[pri:0, instance:tests.TestsOnLocalAPI@437da279]" started-at="2024-06-12T14:00:51 IST" name="deleteTest" finished-at="2024-06-12T14:01:04 IST" duration-ms="13222" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteTest -->
+        <test-method signature="getTest()[pri:0, instance:tests.TestsOnLocalAPI@437da279]" started-at="2024-06-12T14:01:04 IST" name="getTest" finished-at="2024-06-12T14:01:04 IST" duration-ms="198" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getTest -->
-        <test-method signature="postTest()[pri:0, instance:tests.TestsOnLocalAPI@437da279]" started-at="2024-06-12T12:45:18 IST" name="postTest" finished-at="2024-06-12T12:45:33 IST" duration-ms="14260" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- postTest -->
       </class> <!-- tests.TestsOnLocalAPI -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

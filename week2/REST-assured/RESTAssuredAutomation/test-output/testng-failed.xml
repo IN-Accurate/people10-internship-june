@@ -5,6 +5,7 @@
     <classes>
       <class name="tests.TestsOnLocalAPI">
         <methods>
+          <include name="putTest"/>
           <include name="postTest"/>
         </methods>
       </class> <!-- tests.TestsOnLocalAPI -->

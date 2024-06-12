@@ -74,39 +74,135 @@ public class TestsOnLocalAPI {
 		.then()
 		.statusCode(201);
 	}
-	
+//	
+//	@Test	
+//	public void postTest() {
+//		
+//		baseURI = "http://localhost:3000";
+//		
+//		Response response=
+//		given().
+//		get("/users").
+//		then().
+//		statusCode(200).
+//		extract().
+//		response();
+//
+//		String jsonResponse = response.asString();
+//		JsonPath jsonPath = new JsonPath(jsonResponse);
+//		int numberOfUsers = jsonPath.getList("$").size();
+//		
+//		
+//		Scanner scanner = new Scanner(System.in);
+//		System.out.println("Enter the number of users to be added: ");
+//		int numberOfInputs = scanner.nextInt();
+//
+//		int i=0;
+//		
+//		while(i<numberOfInputs) {
+//		
+//		postRequest(numberOfUsers,i);
+//		i++;
+//		
+//		}
+//		
+//		scanner.close();
+//		
+//	}
+//	
+//	@Test
+//	public void putTest() {
+//		
+//		baseURI = "http://localhost:3000";
+//		
+//		
+//		Scanner scanner = new Scanner(System.in);
+//		System.out.println("Enter the id of user whose details are to be updated: ");
+//		int userId= scanner.nextInt();
+//        scanner.nextLine();
+//        
+//		Map<String,Object> map = new HashMap<String,Object>();
+//		System.out.println("Enter the new first name: ");
+//		String first_name = scanner.nextLine();
+//		System.out.println("Enter the new last name: ");
+//		String last_name = scanner.nextLine();
+//		System.out.println("Enter the new subject id: ");
+//		String subject_id = scanner.nextLine();
+//		map.put("firstName", first_name);
+//		map.put("lastName",last_name);
+//		map.put("subjectId",subject_id);
+//		map.put("id",userId);
+//		
+//		Gson gson = new Gson();
+//        String requestBody = gson.toJson(map);
+//        
+//        System.out.println(requestBody);
+//		
+//		given()
+//		.header("content-type","application/json")
+//		.contentType(ContentType.JSON)
+//		.accept(ContentType.JSON)
+//		.body(requestBody)
+//		.when()
+//		.put("/users/"+userId)
+//		.then()
+//		.statusCode(200);
+//		
+//		scanner.close();
+//		
+//	}
+//	
+
+//	@Test
+//	public void patchTest() {
+//		
+//		baseURI = "http://localhost:3000";
+//		
+//		
+//		Scanner scanner = new Scanner(System.in);
+//		System.out.println("Enter the id of user whose details are to be partially updated: ");
+//		int userId= scanner.nextInt();
+//        scanner.nextLine();
+//        
+//		Map<String,Object> map = new HashMap<String,Object>();
+//		System.out.println("Enter the new last name: ");
+//		String last_name = scanner.nextLine();
+//		map.put("lastName", last_name);
+//		map.put("id",userId);
+//		
+//		Gson gson = new Gson();
+//        String requestBody = gson.toJson(map);
+//        
+//        System.out.println(requestBody);
+//		
+//		given()
+//		.header("content-type","application/json")
+//		.contentType(ContentType.JSON)
+//		.accept(ContentType.JSON)
+//		.body(requestBody)
+//		.when()
+//		.patch("/users/"+userId)
+//		.then()
+//		.statusCode(200);
+//		
+//		scanner.close();
+//		
+//	}
+//	
 	@Test
-	public void postTest() {
-		
+	public void deleteTest() {
+
 		baseURI = "http://localhost:3000";
-		
-		Response response=
-		given().
-		get("/users").
-		then().
-		statusCode(200).
-		extract().
-		response();
-
-		String jsonResponse = response.asString();
-		JsonPath jsonPath = new JsonPath(jsonResponse);
-		int numberOfUsers = jsonPath.getList("$").size();
-		
-		
 		Scanner scanner = new Scanner(System.in);
-		System.out.println("Enter the number of users to be added: ");
-		int numberOfInputs = scanner.nextInt();
-
-		int i=0;
-		
-		while(i<numberOfInputs) {
-		
-		postRequest(numberOfUsers,i);
-		i++;
-		
-		}
-		
+		System.out.println("Enter the id of user whose details are to be deleted: ");
+		int userId= scanner.nextInt();
+        scanner.nextLine();
+		when()
+		.delete("/users/"+userId)
+		.then()
+		.statusCode(200);
 		scanner.close();
 		
 	}
+	
 }

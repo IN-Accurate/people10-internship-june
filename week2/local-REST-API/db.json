@@ -25,16 +25,10 @@
       "subjectId": "1"
     },
     {
-      "id": "5",
       "firstName": "Vishal",
-      "lastName": "Sankar",
+      "lastName": "Sankar K m",
+      "id": "5",
       "subjectId": "1"
-    },
-    {
-      "id": 6,
-      "firstName": "Nikhil",
-      "lastName": "Zachariah",
-      "subjectId": "2"
     }
   ],
   "subjects": [
