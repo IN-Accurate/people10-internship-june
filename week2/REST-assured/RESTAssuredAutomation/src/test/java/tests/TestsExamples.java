@@ -21,7 +21,7 @@ public class TestsExamples {
 		System.out.println(response.getHeader("content-type"));
 		int statuscode = response.getStatusCode();
 		Assert.assertEquals(statuscode,200);
-;	}
+;	}	
 	@Test
 	public void test_2() {
 		baseURI="https://reqres.in/api";

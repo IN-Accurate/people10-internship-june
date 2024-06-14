@@ -54,7 +54,7 @@ public class GetAndPostExamples {
         
         System.out.println(requestBody);
 
-		baseURI="https://reqres.in/api";
+		baseURI="https://reqres.in";
 		
 		given().
 		header("content-type","application/json").
