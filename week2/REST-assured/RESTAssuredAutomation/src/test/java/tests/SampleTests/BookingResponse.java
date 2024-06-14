@@ -1,8 +1,5 @@
 package tests.SampleTests;
 
-import java.time.LocalDate;
-import java.util.Map;
-
 public class BookingResponse {
     private int bookingid;
     private Booking booking;
@@ -30,7 +27,6 @@ public class BookingResponse {
         private boolean depositpaid;
         private BookingDates bookingdates;
         private String additionalneeds;
-
 
         public String getFirstname() {
             return firstname;
@@ -81,9 +77,11 @@ public class BookingResponse {
         }
     }
 
-    public static class BookingDates {
+    static class BookingDates {
         private String checkin;
         private String checkout;
+
+        // Getters and setters
 
         public String getCheckin() {
             return checkin;
