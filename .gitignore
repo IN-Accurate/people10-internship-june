@@ -6,3 +6,5 @@
 
 # Ignore all testdata.json files at any level
 **/testdata.json
+
+**/allure-results/

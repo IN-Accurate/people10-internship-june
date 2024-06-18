@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-06-17T18:19:02 IST" name="Default suite" finished-at="2024-06-17T18:19:53 IST" duration-ms="50379">
+  <suite started-at="2024-06-18T19:53:59 IST" name="Default suite" finished-at="2024-06-18T19:55:05 IST" duration-ms="65929">
     <groups>
     </groups>
-    <test started-at="2024-06-17T18:19:02 IST" name="Default test" finished-at="2024-06-17T18:19:53 IST" duration-ms="50379">
-      <class name="tests.SampleTests.HTTPRequestsTests">
-        <test-method signature="testHttpRequests()[pri:0, instance:tests.SampleTests.HTTPRequestsTests@2e3967ea]" started-at="2024-06-17T18:19:02 IST" name="testHttpRequests" finished-at="2024-06-17T18:19:53 IST" duration-ms="50292" status="PASS">
+    <test started-at="2024-06-18T19:53:59 IST" name="Default test" finished-at="2024-06-18T19:55:05 IST" duration-ms="65929">
+      <class name="tests.TestsOnLocalAPI">
+        <test-method signature="LocalApiTests()[pri:0, instance:tests.TestsOnLocalAPI@576d5deb]" started-at="2024-06-18T19:53:59 IST" name="LocalApiTests" finished-at="2024-06-18T19:55:05 IST" duration-ms="65847" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testHttpRequests -->
-      </class> <!-- tests.SampleTests.HTTPRequestsTests -->
+        </test-method> <!-- LocalApiTests -->
+      </class> <!-- tests.TestsOnLocalAPI -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

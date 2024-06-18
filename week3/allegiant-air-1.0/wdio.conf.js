@@ -51,26 +51,26 @@ exports.config = {
     //
     capabilities: [
         
-        {
-            browserName: 'firefox',
-            'moz:firefoxOptions': {
-                args: ['-headless']
-            },
-            'acceptInsecureCerts': true,  // Accept insecure certificates
-            'acceptSslCerts': true,       // Accept SSL certificates
-            'firefoxOptions': {
-                prefs: {
-                    'security.sandbox.content.level': 5,
-                    'security.enterprise_roots.enabled': true
-                }
-            }
-        },
+        // {
+        //     browserName: 'firefox',
+        //     'moz:firefoxOptions': {
+        //         args: ['-headless']
+        //     },
+        //     'acceptInsecureCerts': true,  // Accept insecure certificates
+        //     'acceptSslCerts': true,       // Accept SSL certificates
+        //     'firefoxOptions': {
+        //         prefs: {
+        //             'security.sandbox.content.level': 5,
+        //             'security.enterprise_roots.enabled': true
+        //         }
+        //     }
+        // },
         {
         browserName: 'chrome'
     }, 
-    {
-        browserName: 'MicrosoftEdge'
-    },
+    // {
+    //     browserName: 'MicrosoftEdge'
+    // },
 
 ],
 
