@@ -1,0 +1,4 @@
+{
+  "using": "css selector",
+  "value": "button[data-hook=\"hotel-details-page_continue\"]"
+}

@@ -1,0 +1,4 @@
+{
+  "using": "css selector",
+  "value": "div[data-hook=\"travelers-form_adults_1_suffix\"]"
+}

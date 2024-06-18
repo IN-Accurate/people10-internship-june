@@ -1,0 +1,4 @@
+{
+  "using": "css selector",
+  "value": "button[data-hook=\"pet-in-cabin-card_add-to-cart\"]"
+}

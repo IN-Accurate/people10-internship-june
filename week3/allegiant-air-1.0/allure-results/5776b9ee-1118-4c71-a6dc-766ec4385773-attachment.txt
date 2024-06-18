@@ -1,0 +1,4 @@
+{
+  "using": "xpath",
+  "value": "//a[starts-with(@data-hook,\"hotels-page-hotel-card_\")]"
+}

@@ -1,0 +1,5 @@
+{
+  "error": "no such element",
+  "message": "no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"button[data-hook=\"flight-search-date-picker_expand-start-date\"]\"}\n  (Session info: chrome=125.0.6422.142)",
+  "stacktrace": "\tGetHandleVerifier [0x00007FF725061F52+60322]\n\t(No symbol) [0x00007FF724FDCEC9]\n\t(No symbol) [0x00007FF724E97EBA]\n\t(No symbol) [0x00007FF724EE7676]\n\t(No symbol) [0x00007FF724EE773C]\n\t(No symbol) [0x00007FF724F2E967]\n\t(No symbol) [0x00007FF724F0C25F]\n\t(No symbol) [0x00007FF724F2BC80]\n\t(No symbol) [0x00007FF724F0BFC3]\n\t(No symbol) [0x00007FF724ED9617]\n\t(No symbol) [0x00007FF724EDA211]\n\tGetHandleVerifier [0x00007FF7253794AD+3301629]\n\tGetHandleVerifier [0x00007FF7253C36D3+3605283]\n\tGetHandleVerifier [0x00007FF7253B9450+3563680]\n\tGetHandleVerifier [0x00007FF725114326+790390]\n\t(No symbol) [0x00007FF724FE750F]\n\t(No symbol) [0x00007FF724FE3404]\n\t(No symbol) [0x00007FF724FE3592]\n\t(No symbol) [0x00007FF724FD2F9F]\n\tBaseThreadInitThunk [0x00007FFEC5E27344+20]\n\tRtlUserThreadStart [0x00007FFEC701CC91+33]\n"
+}

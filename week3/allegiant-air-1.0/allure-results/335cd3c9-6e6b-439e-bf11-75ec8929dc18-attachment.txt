@@ -1,0 +1,4 @@
+{
+  "using": "css selector",
+  "value": "label[data-hook=\"travelers-form_adults_1_gender_MALE\"]"
+}
