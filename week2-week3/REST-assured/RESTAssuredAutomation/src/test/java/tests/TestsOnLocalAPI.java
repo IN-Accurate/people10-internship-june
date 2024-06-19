@@ -42,6 +42,7 @@ public class TestsOnLocalAPI {
                 .response();
 
         String jsonResponse = response.asString();
+        System.out.println(jsonResponse+"\n");
 
         Gson gson = new Gson();
         Type UserListType = new TypeToken<List<User>>() {}.getType();

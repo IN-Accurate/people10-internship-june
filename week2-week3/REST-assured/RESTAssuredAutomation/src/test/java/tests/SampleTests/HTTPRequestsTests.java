@@ -98,7 +98,7 @@ public class HTTPRequestsTests {
 		String responseBody = response.getBody().asString();
 
 		System.out.println("Response from /booking endpoint (Status " + statusCode + "):\n" + responseBody);
-
+		
 		if (statusCode == 200) {
 			BookingResponse bookingResponse = gson.fromJson(responseBody, BookingResponse.class);
 			int currentBookingId = bookingResponse.getBookingid();
@@ -210,7 +210,7 @@ public class HTTPRequestsTests {
 		List<String> fieldsToUpdate = new ArrayList<>();
 
 		while (true) {
-			String field = scanner.nextLine().toLowerCase().trim();
+			String field = scanner.nextLine();
 			if (field.equals("finish")) {
 				break;
 			}

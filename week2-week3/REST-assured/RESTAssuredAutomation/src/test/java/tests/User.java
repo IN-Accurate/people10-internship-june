@@ -7,7 +7,6 @@ public class User {
     private int subjectId;
     private int id;
 
-    // Getters and Setters
     public String getFirstName() {
         return firstName;
     }

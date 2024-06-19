@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-06-18T19:53:59 IST" name="Default suite" finished-at="2024-06-18T19:55:05 IST" duration-ms="65929">
+  <suite started-at="2024-06-19T11:54:30 IST" name="Default suite" finished-at="2024-06-19T11:54:35 IST" duration-ms="5320">
     <groups>
     </groups>
-    <test started-at="2024-06-18T19:53:59 IST" name="Default test" finished-at="2024-06-18T19:55:05 IST" duration-ms="65929">
-      <class name="tests.TestsOnLocalAPI">
-        <test-method signature="LocalApiTests()[pri:0, instance:tests.TestsOnLocalAPI@576d5deb]" started-at="2024-06-18T19:53:59 IST" name="LocalApiTests" finished-at="2024-06-18T19:55:05 IST" duration-ms="65847" status="PASS">
+    <test started-at="2024-06-19T11:54:30 IST" name="Default test" finished-at="2024-06-19T11:54:35 IST" duration-ms="5320">
+      <class name="tests.SoapXMLRequest">
+        <test-method signature="validateSoapXML()[pri:0, instance:tests.SoapXMLRequest@4f80542f]" started-at="2024-06-19T11:54:30 IST" name="validateSoapXML" finished-at="2024-06-19T11:54:35 IST" duration-ms="5215" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- LocalApiTests -->
-      </class> <!-- tests.TestsOnLocalAPI -->
+        </test-method> <!-- validateSoapXML -->
+      </class> <!-- tests.SoapXMLRequest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

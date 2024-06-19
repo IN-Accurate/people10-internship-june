@@ -81,8 +81,6 @@ public class BookingResponse {
         private String checkin;
         private String checkout;
 
-        // Getters and setters
-
         public String getCheckin() {
             return checkin;
         }

@@ -1,93 +1,91 @@
 const { Given, When, Then } = require("@wdio/cucumber-framework");
 const Home = require("../pageobjects/home.page.js");
-// const Flights = require("../pageobjects/flights.page.js");
-// const Bundles = require("../pageobjects/bundles.page.js");
-// const Travelers = require("../pageobjects/travelers.page.js");
-// const Seats = require("../pageobjects/seats.page.js");
-// const Bags = require("../pageobjects/bags.page.js");
-// const Hotels = require("../pageobjects/hotels.page.js");
-// const Cars = require("../pageobjects/cars.page.js");
+const Flights = require("../pageobjects/flights.page.js");
+
+let adults, children, infants_in_seat, infants_in_lap;
 
 Given(/^the user is on homepage$/, async () => {
   await Home.OpenHomePage();
 });
 
 When(/^the user is shown a cookie consent banner$/, async () => {
-	await Home.isCookiesDisplayed();
+  await Home.isCookiesDisplayed();
 });
 
 Then(/^the user can accept and close the cookie consent banner$/, async () => {
-	await Home.closeCookies();
+  await Home.closeCookies();
 });
 
-Given(/^the user is still in the homepage$/, async () => {
-	await browser.pause(100);
-});
+Given(/^the user is still in the homepage$/, async () => {});
 
 When(/^the user is shown a merchandise offer overlay$/, async () => {
-	await Home.isMerchandiseOverlayDisplayed();
+  await Home.isMerchandiseOverlayDisplayed();
 });
 
 Then(/^the user can close the overlay$/, async () => {
-	await Home.closeMerchandiseOverlay();
+  await Home.closeMerchandiseOverlay();
 });
 
-
 When(/^the user selects the (.*)$/, async (trip_type) => {
-	await Home.selectTripType(trip_type);
-	await browser.pause(2000);
+  await Home.selectTripType(trip_type);
 });
 
 Then(
   /^the user can select (.*) and (.*) airports$/,
   async (departure_city, destination_city) => {
-	await Home.selectAirports(departure_city,destination_city);
-	await browser.pause(3000);
+    await Home.selectAirports(departure_city, destination_city);
   }
 );
 
-// Then(
-//   /^the user can select (.*) and (.*)$/,
-//   async (departure_month, return_month) => {
-// 	await browser.pause(100);
-//   }
-// );
+When(/^the user can select the dates$/, async () => {
+  await Home.selectTripDates();
+});
 
-// Then(
-//   /^the user can provide (.*), (.*), (.*), (.*)$/,
-//   async (
-//     no_of_adults,
-//     no_of_children,
-//     no_of_infants_in_seat,
-//     no_of_infants_in_lap
-//   ) => {
-// 	await browser.pause(100);
-//   }
-// );
+When(
+  /^the user provides (.*), (.*), (.*), (.*)$/,
+  async (
+    no_of_adults,
+    no_of_children,
+    no_of_infants_in_seat,
+    no_of_infants_in_lap
+  ) => {
+    let adults = no_of_adults;
+    let children = no_of_children;
+    let infants_in_seat = no_of_infants_in_seat;
+    let infants_in_lap = no_of_infants_in_lap;
 
-// Then(/^the user clicks continue to proceed to the flights page$/, async () => {
-// 	await browser.pause(100);
-// });
+    await Home.provideTravelerDetails(
+      no_of_adults,
+      no_of_children,
+      no_of_infants_in_seat,
+      no_of_infants_in_lap
+    );
+  }
+);
 
-// Given(/^the user is on the flights page$/, async () => {
-// 	await browser.pause(100);
-// });
+Then(/^the user clicks continue to proceed to the flights page$/, async () => {
+  await Home.clickContinue();
+});
 
-// When(/^the user changes the departure date$/, async () => {
-// 	await browser.pause(100);
-// });
+Given(/^the user is on the flights page$/, async () => {
+  await Flights.changeListDate();
+});
 
-// Then(/^the user is provided a calendar view$/, async () => {
-// 	await browser.pause(100);
-// });
+When(/^the user changes the departure date$/, async () => {
+  return true;
+});
 
-// Then(/^the user changes the departure date$/, async () => {
-// 	await browser.pause(100);
-// });
+Then(/^the user is provided a calendar view$/, async () => {
+  return true;
+});
 
-// Then(/^the user clicks continue to proceed to the bundles page$/, async () => {
-// 	await browser.pause(100);
-// });
+Then(/^the user changes the departure date$/, async () => {
+  return true;
+});
+
+Then(/^the user clicks continue to proceed to the bundles page$/, async () => {
+  return true;
+});
 
 // Given(/^user is on the bundles page$/, async () => {
 // 	await browser.pause(100);
@@ -174,7 +172,6 @@ Then(
 // Then(/^the user clicks continue to proceed to the payments page$/, async() => {
 // 	await browser.pause(100);
 // });
-
 
 // Given(/^user is on the payments page$/, async () => {
 // 	await browser.pause(100);
