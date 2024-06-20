@@ -1,5 +1,0 @@
-{
-  "error": "no such element",
-  "message": "no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"button[data-testid=\"file-submit\"]\"}\n  (Session info: chrome=125.0.6422.142)",
-  "stacktrace": "\tGetHandleVerifier [0x00007FF61BCE1F52+60322]\n\t(No symbol) [0x00007FF61BC5CEC9]\n\t(No symbol) [0x00007FF61BB17EBA]\n\t(No symbol) [0x00007FF61BB67676]\n\t(No symbol) [0x00007FF61BB6773C]\n\t(No symbol) [0x00007FF61BBAE967]\n\t(No symbol) [0x00007FF61BB8C25F]\n\t(No symbol) [0x00007FF61BBABC80]\n\t(No symbol) [0x00007FF61BB8BFC3]\n\t(No symbol) [0x00007FF61BB59617]\n\t(No symbol) [0x00007FF61BB5A211]\n\tGetHandleVerifier [0x00007FF61BFF94AD+3301629]\n\tGetHandleVerifier [0x00007FF61C0436D3+3605283]\n\tGetHandleVerifier [0x00007FF61C039450+3563680]\n\tGetHandleVerifier [0x00007FF61BD94326+790390]\n\t(No symbol) [0x00007FF61BC6750F]\n\t(No symbol) [0x00007FF61BC63404]\n\t(No symbol) [0x00007FF61BC63592]\n\t(No symbol) [0x00007FF61BC52F9F]\n\tBaseThreadInitThunk [0x00007FFCA6B37344+20]\n\tRtlUserThreadStart [0x00007FFCA76A26B1+33]\n"
-}

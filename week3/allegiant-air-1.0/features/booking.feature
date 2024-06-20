@@ -25,24 +25,22 @@ Feature: Booking flights on allegiant
   Scenario: User is on flights page and need to proceed to bundles page
     Given the user is on the flights page
     When the user changes the departure date
-    Then the user is provided a calendar view
-  #   Then the user changes the departure date
-  #   Then the user clicks continue to proceed to the bundles page
+    Then the user is provided a calendar view and proceeds to bundles page
 
-#     Scenario: User is on bundles page and need to proceed to travelers page
-#         Given user is on the bundles page
-#         When different bundle type options are shown
-#         Then user can select a <type_of_bundle>
-#         And the user clicks continue to proceed to the travelers page
-#         Examples:
-#             | type_of_bundle |
-#             |      basic     |
-#       #     |      bonus     |
-#       #     |      total     |    
-#     Scenario: User is on travelers page and need to proceed to seats page
-#         Given user is on the traverlers page 
-#         When the user inputs the required details
-#         Then the user clicks continue to proceed to the seats page
+
+    Scenario: User is on bundles page and need to proceed to travelers page
+        Given user is on the bundles page
+        When user can select a <type_of_bundle>
+        Then the user clicks continue to proceed to the travelers page
+        Examples:
+            | type_of_bundle |
+            # |      total     |
+            |      bonus     |  
+
+    Scenario: User is on travelers page and need to proceed to seats page
+        Given user is on the traverlers page 
+        When the user inputs the required details
+        Then the user clicks continue to proceed to the seats page
 #     Scenario: User is on seats page and need to proceed to Bags page
 #         Given user is on the seats page
 #         When user selects a type of seats as <seat_type>

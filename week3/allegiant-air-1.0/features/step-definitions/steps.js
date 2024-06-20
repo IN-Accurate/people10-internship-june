@@ -1,11 +1,23 @@
 const { Given, When, Then } = require("@wdio/cucumber-framework");
 const Home = require("../pageobjects/home.page.js");
 const Flights = require("../pageobjects/flights.page.js");
-
-let adults, children, infants_in_seat, infants_in_lap;
+const Bundles = require("../pageobjects/bundles.page.js");
+const assert = require("assert");
 
 Given(/^the user is on homepage$/, async () => {
   await Home.OpenHomePage();
+  await browser.waitUntil(
+    async () => {
+      const title = await browser.getTitle();
+      return title.includes(
+        "Allegiant® | Cheap Flights, Airline Tickets, Vacation & Hotel Deals"
+      );
+    },
+    {
+      timeout: 10000,
+      timeoutMsg: "Expected to be on the home page",
+    }
+  );
 });
 
 When(/^the user is shown a cookie consent banner$/, async () => {
@@ -16,7 +28,20 @@ Then(/^the user can accept and close the cookie consent banner$/, async () => {
   await Home.closeCookies();
 });
 
-Given(/^the user is still in the homepage$/, async () => {});
+Given(/^the user is still in the homepage$/, async () => {
+  await browser.waitUntil(
+    async () => {
+      const title = await browser.getTitle();
+      return title.includes(
+        "Allegiant® | Cheap Flights, Airline Tickets, Vacation & Hotel Deals"
+      );
+    },
+    {
+      timeout: 10000,
+      timeoutMsg: "Expected to be on the home page",
+    }
+  );
+});
 
 When(/^the user is shown a merchandise offer overlay$/, async () => {
   await Home.isMerchandiseOverlayDisplayed();
@@ -72,39 +97,31 @@ Given(/^the user is on the flights page$/, async () => {
 });
 
 When(/^the user changes the departure date$/, async () => {
-  return true;
+  await Flights.selectCalendarView();
 });
 
-Then(/^the user is provided a calendar view$/, async () => {
-  return true;
+Then(
+  /^the user is provided a calendar view and proceeds to bundles page$/,
+  async () => {
+    await Flights.changeCalendarDate();
+    await Flights.continueToBundles();
+  }
+);
+
+Given(/^user is on the bundles page$/, async () => {
+  await Bundles.AssertPageReached();
 });
 
-Then(/^the user changes the departure date$/, async () => {
-  return true;
+When(/^user can select a (.*)$/, async (type_of_bundle) => {
+  await Bundles.selectBundle(type_of_bundle);
 });
 
-Then(/^the user clicks continue to proceed to the bundles page$/, async () => {
-  return true;
-});
-
-// Given(/^user is on the bundles page$/, async () => {
-// 	await browser.pause(100);
-// });
-
-// When(/^different bundle type options are shown$/, async () => {
-// 	await browser.pause(100);
-// });
-
-// Then(/^user can select a (.*)$/, async (type_of_bundle) => {
-// 	await browser.pause(100);
-// });
-
-// Then(
-//   /^the user clicks continue to proceed to the travelers page$/,
-//   async () => {
-// 	await browser.pause(100);
-//   }
-// );
+Then(
+  /^the user clicks continue to proceed to the travelers page$/,
+  async () => {
+    await Bundles.continueToTravelers();
+  }
+);
 
 // Given(/^user is on the traverlers page$/, async () => {
 // 	await browser.pause(100);
