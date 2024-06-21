@@ -5,7 +5,7 @@
     <classes>
       <class name="tests.GetAndPostExamples">
         <methods>
-          <include name="testParameters"/>
+          <include name="testGetRequestUrlParameters"/>
         </methods>
       </class> <!-- tests.GetAndPostExamples -->
     </classes>

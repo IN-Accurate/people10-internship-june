@@ -1,13 +1,7 @@
 const { $ } = require('@wdio/globals')
 const Page = require('./page');
 
-/**
- * sub page containing specific selectors and methods for a specific page
- */
 class DownloadPage extends Page {
-    /**
-     * define selectors using getter methods
-     */
     get emailField () {
         return $('//input[@id="Form_getForm_Email"]');
     }

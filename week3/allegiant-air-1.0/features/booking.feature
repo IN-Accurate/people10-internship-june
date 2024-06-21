@@ -39,8 +39,8 @@ Feature: Booking flights on allegiant
 
     Scenario: User is on travelers page and need to proceed to seats page
         Given user is on the traverlers page 
-        When the user inputs the required details
-        Then the user clicks continue to proceed to the seats page
+    #     When the user inputs the required details
+    #     Then the user clicks continue to proceed to the seats page
 #     Scenario: User is on seats page and need to proceed to Bags page
 #         Given user is on the seats page
 #         When user selects a type of seats as <seat_type>

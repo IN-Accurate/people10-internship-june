@@ -1,21 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-06-20T18:48:40 IST" name="Default suite" finished-at="2024-06-20T18:48:51 IST" duration-ms="11067">
+  <suite started-at="2024-06-21T12:33:19 IST" name="Default suite" finished-at="2024-06-21T12:33:33 IST" duration-ms="14278">
     <groups>
     </groups>
-    <test started-at="2024-06-20T18:48:40 IST" name="Default test" finished-at="2024-06-20T18:48:51 IST" duration-ms="11067">
+    <test started-at="2024-06-21T12:33:19 IST" name="Default test" finished-at="2024-06-21T12:33:33 IST" duration-ms="14278">
       <class name="tests.GetAndPostExamples">
-        <test-method signature="testInValidGet()[pri:0, instance:tests.GetAndPostExamples@60bd273d]" started-at="2024-06-20T18:48:40 IST" name="testInValidGet" finished-at="2024-06-20T18:48:44 IST" duration-ms="4337" status="PASS">
+        <test-method signature="testGetRequestUrlParameters()[pri:0, instance:tests.GetAndPostExamples@121314f7]" started-at="2024-06-21T12:33:19 IST" name="testGetRequestUrlParameters" finished-at="2024-06-21T12:33:23 IST" duration-ms="3965" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetRequestUrlParameters -->
+        <test-method signature="testInValidGet()[pri:0, instance:tests.GetAndPostExamples@121314f7]" started-at="2024-06-21T12:33:23 IST" name="testInValidGet" finished-at="2024-06-21T12:33:26 IST" duration-ms="3902" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testInValidGet -->
-        <test-method signature="testParameters()[pri:0, instance:tests.GetAndPostExamples@60bd273d]" started-at="2024-06-20T18:48:44 IST" name="testParameters" finished-at="2024-06-20T18:48:50 IST" duration-ms="5846" status="PASS">
+        <test-method signature="testParameters()[pri:0, instance:tests.GetAndPostExamples@121314f7]" started-at="2024-06-21T12:33:26 IST" name="testParameters" finished-at="2024-06-21T12:33:32 IST" duration-ms="5562" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testParameters -->
-        <test-method signature="testValidGet()[pri:0, instance:tests.GetAndPostExamples@60bd273d]" started-at="2024-06-20T18:48:50 IST" name="testValidGet" finished-at="2024-06-20T18:48:51 IST" duration-ms="793" status="PASS">
+        <test-method signature="testValidGet()[pri:0, instance:tests.GetAndPostExamples@121314f7]" started-at="2024-06-21T12:33:32 IST" name="testValidGet" finished-at="2024-06-21T12:33:33 IST" duration-ms="745" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testValidGet -->

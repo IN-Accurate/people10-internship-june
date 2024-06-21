@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\P10\AppData\Local\Temp\testng-eclipse-1961496333\testng-customsuite.xml</span>
+                    <span>C:\Users\P10\AppData\Local\Temp\testng-eclipse--705575409\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods,   3 passed</span>
+                    <span class="method-stats">4 methods,   4 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -101,6 +101,11 @@
                       <a href="#" panel-name="suite-Default_suite" class="show-methods passed suite-Default_suite"> (show)</a> <!-- show-methods passed suite-Default_suite -->
                     </span>
                     <div class="method-list-content passed suite-Default_suite">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="tests.GetAndPostExamples" class="method navigator-link" hash-for-method="testGetRequestUrlParameters">testGetRequestUrlParameters</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Default_suite" title="tests.GetAndPostExamples" class="method navigator-link" hash-for-method="testInValidGet">testInValidGet</a> <!-- method navigator-link -->
@@ -136,6 +141,13 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
+                  <a name="testGetRequestUrlParameters">
+                  </a> <!-- testGetRequestUrlParameters -->
+                  <span class="method-name">testGetRequestUrlParameters</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
                   <a name="testInValidGet">
                   </a> <!-- testInValidGet -->
                   <span class="method-name">testInValidGet</span>
@@ -160,7 +172,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\P10\AppData\Local\Temp\testng-eclipse-1961496333\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\P10\AppData\Local\Temp\testng-eclipse--705575409\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -209,24 +221,28 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(3);
+data.addRows(4);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'testParameters')
 data.setCell(0, 2, 'tests.GetAndPostExamples')
-data.setCell(0, 3, 5846);
+data.setCell(0, 3, 5562);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'testInValidGet')
+data.setCell(1, 1, 'testGetRequestUrlParameters')
 data.setCell(1, 2, 'tests.GetAndPostExamples')
-data.setCell(1, 3, 4337);
+data.setCell(1, 3, 3965);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'testValidGet')
+data.setCell(2, 1, 'testInValidGet')
 data.setCell(2, 2, 'tests.GetAndPostExamples')
-data.setCell(2, 3, 793);
+data.setCell(2, 3, 3902);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'testValidGet')
+data.setCell(3, 2, 'tests.GetAndPostExamples')
+data.setCell(3, 3, 745);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 10 seconds</span>
+              <span class="suite-total-time">Total running time: 14 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -254,16 +270,20 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">tests.GetAndPostExamples</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">testInValidGet</span>
+                <span class="method-name">testGetRequestUrlParameters</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
+                <span class="method-name">testInValidGet</span>
+                <span class="method-start">3977 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
                 <span class="method-name">testParameters</span>
-                <span class="method-start">4345 ms</span>
+                <span class="method-start">7884 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testValidGet</span>
-                <span class="method-start">10195 ms</span>
+                <span class="method-start">13449 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

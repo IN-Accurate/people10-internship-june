@@ -2,7 +2,6 @@ const { Given, When, Then } = require("@wdio/cucumber-framework");
 const Home = require("../pageobjects/home.page.js");
 const Flights = require("../pageobjects/flights.page.js");
 const Bundles = require("../pageobjects/bundles.page.js");
-const assert = require("assert");
 
 Given(/^the user is on homepage$/, async () => {
   await Home.OpenHomePage();
@@ -74,10 +73,6 @@ When(
     no_of_infants_in_seat,
     no_of_infants_in_lap
   ) => {
-    let adults = no_of_adults;
-    let children = no_of_children;
-    let infants_in_seat = no_of_infants_in_seat;
-    let infants_in_lap = no_of_infants_in_lap;
 
     await Home.provideTravelerDetails(
       no_of_adults,
@@ -123,9 +118,12 @@ Then(
   }
 );
 
-// Given(/^user is on the traverlers page$/, async () => {
-// 	await browser.pause(100);
-// });
+Given(
+  /^user is on the traverlers page$/,
+  async () => {
+
+  }
+);
 
 // When(/^the user inputs the required details$/, async () => {
 // 	await browser.pause(100);
