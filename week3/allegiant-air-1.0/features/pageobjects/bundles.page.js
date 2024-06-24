@@ -1,49 +1,37 @@
-class Bundles{
-
-    constructor(){
+class Bundles {
+    constructor() {
         this.continueToTravelersBtn = $('button[data-hook="bundles-page_continue"]');
-        this.validationText =  $('//span[@data-hook="bundles-page_page-heading"]');
+        this.validationText = $('//span[@data-hook="bundles-page_page-heading"]');
     }
 
-    get tierTwoSelector(){
-        return $('button[data-hook="select-tier-2"]');  
-    }
-
-    AssertPageReached = async()=>{
+    async AssertPageReached() {
+        await this.validationText.waitForDisplayed({ timeout: 10000 });
         await expect(this.validationText).toHaveTextContaining("Select Your Bundle");
     }
 
-    selectBundle = async(type_of_bundle)=>{
-
+    async selectBundle(type_of_bundle) {
         let bundleSuffix;
-        switch(type_of_bundle){
-
+        switch (type_of_bundle) {
             case "bonus":
-                    bundleSuffix = "2";
-                    break;
+                bundleSuffix = "2";
+                break;
             case "total":
-                    bundleSuffix = "3";
-                        break;
+                bundleSuffix = "3";
+                break;
+            default:
+                throw new Error(`Invalid bundle type: ${type_of_bundle}`);
         }
-        let bundleSelected = await $(`//button[contains(@data-hook,"select-tier-${bundleSuffix}")]`);
+        const bundleSelected = await $(`//button[contains(@data-hook,"select-tier-${bundleSuffix}")]`);
+        await bundleSelected.waitForClickable({ timeout: 10000 });
         await bundleSelected.click();
     }
 
-    continueToTravelers=async()=>{
+    async continueToTravelers() {
 
-        let tierTwoButton = await this.tierTwoSelector;
-        await tierTwoButton.waitForExist();
-        await tierTwoButton.waitForClickable();
-        await tierTwoButton.click();
-
-        
-        await this.continueToTravelersBtn.waitForExist();
-        await this.continueToTravelersBtn.waitForClickable();
+        await this.continueToTravelersBtn.waitForExist({ timeout: 10000 });
+        await this.continueToTravelersBtn.waitForClickable({ timeout: 10000 });
         await this.continueToTravelersBtn.click();
-
     }
-
-
 }
 
-module.exports=new Bundles();
+module.exports = new Bundles();

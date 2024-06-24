@@ -2,6 +2,7 @@ const { Given, When, Then } = require("@wdio/cucumber-framework");
 const Home = require("../pageobjects/home.page.js");
 const Flights = require("../pageobjects/flights.page.js");
 const Bundles = require("../pageobjects/bundles.page.js");
+const Travelers = require("../pageobjects/travelers.page.js");
 
 Given(/^the user is on homepage$/, async () => {
   await Home.OpenHomePage();
@@ -117,22 +118,30 @@ Then(
     await Bundles.continueToTravelers();
   }
 );
+Given(/^user is on the traverlers page$/, async () => {
+  await browser.waitUntil(
+      async () => {
+          const title = await browser.getTitle();
+          return title.includes("Travelers");
+      },
+      {
+          timeout: 10000,
+          timeoutMsg: "Expected to be on the travelers page",
+      }
+  );
+});
 
-Given(
-  /^user is on the traverlers page$/,
-  async () => {
+When(/^the user inputs the required details$/, async () => {
+  await Travelers.fillDetails_Adults();
+  await Travelers.fillDetails_Children();
+  await Travelers.fillDetails_Infant_In_Seat();
+  await Travelers.fillDetails_Infant_In_Lap();
+});
 
-  }
-);
-
-// When(/^the user inputs the required details$/, async () => {
-// 	await browser.pause(100);
-// });
-
-// Then(/^the user clicks continue to proceed to the seats page$/, async () => {
-// 	await browser.pause(100);
-// });
-
+Then(/^the user clicks continue to proceed to the seats page$/, async () => {
+  await Travelers.continueToSeatPage();
+  await browser.pause(3000);
+});
 // Given(/^user is on the seats page$/, async () => {
 // 	await browser.pause(100);
 // });
