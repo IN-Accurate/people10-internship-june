@@ -88,7 +88,7 @@ class HomePage {
     let i = 0;
     let currDate = new Date();
     let currDay = currDate.getDate();
-    let currDayInt = currDay + 2;
+    let currDayInt = currDay;
 
     while (!(await $(`[data-hook="flight-search-date-picker_calendar-${i}_select-day-${currDayInt}"]`).isEnabled())) {
       currDayInt++;
