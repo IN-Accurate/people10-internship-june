@@ -16,13 +16,16 @@ class Hotels{
         
 
         let roomsAndRatesBtn = await this.roomsAndRatesBtn;
+        if(roomsAndRatesBtn){
         await roomsAndRatesBtn.waitForClickable();
-        await roomsAndRatesBtn.click();
+        await roomsAndRatesBtn.click();}
 
         
         let confirmRoomBtn = await this.confirmRoom;
+        if(confirmRoomBtn){
         await confirmRoomBtn.waitForClickable();
         await confirmRoomBtn.click();
+        }
     }
 
     continueToCars=async()=>{

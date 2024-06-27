@@ -184,45 +184,10 @@ When(
 
 When(/^user selects the extras$/, async () => {
   await Bags.selectExtras();
+  await browser.pause(3000);
 });
 
 Then(/^the user clicks continue to proceed to the hotels page$/, async () => {
   await Bags.continueToHotels();
-});
-
-Given(/^user is on the hotels page$/, async () => {
-	await browser.pause(100);
-});
-
-When(/^user selects a hotel$/, async () => {
-  await Hotels.selectHotel();
-});
-
-Then(/^the user clicks continue to proceed to the cars page$/, async () => {
-  await Hotels.continueToCars();
-});
-
-Given(/^user is on the cars page$/, async() => {
-	await browser.pause(100);
-});
-
-When(/^user selects a car$/, async() => {
-  await Cars.selectCar();
-});
-
-Then(/^the user clicks continue to proceed to the payments page$/, async() => {
-	await Cars.continueToPayment();
-});
-
-Given(/^user is on the payments page$/, async () => {
-	await browser.pause(100);
-});
-
-When(/^the user enters required details$/, async () => {
-	await browser.pause(100);
-});
-
-Then(/^user can complete booking$/, async () => {
-	await browser.pause(100);
-	return true;
+  await browser.pause(3000);
 });

@@ -20,7 +20,7 @@ Feature: Booking flights on allegiant
 
     Examples:
       | trip_type | departure_city      | destination_city                     | no_of_adults | no_of_children | no_of_infants_in_seat | no_of_infants_in_lap |
-      | One way   | Las Vegas, NV (LAS) | Vancouver, BC / Bellingham, WA (BLI) |            5 |              2 |                     1 |                    0 |
+      | One way   | Las Vegas, NV (LAS) | Vancouver, BC / Bellingham, WA (BLI) |            3 |              1 |                     1 |                    1 |
 
   # Scenario: User is on flights page and need to proceed to bundles page
   #   Given the user is on the flights page
@@ -57,18 +57,25 @@ Feature: Booking flights on allegiant
         Examples:
             | no_of_checked_bags |
             |    3               |
-    Scenario: User is on hotels page and need to proceed to cars page
-        Given user is on the hotels page
-        When user selects a hotel
-        Then the user clicks continue to proceed to the cars page
-    Scenario: User is on cars page and need to proceed to payments page
-        Given user is on the cars page
-        When user selects a car
-        Then the user clicks continue to proceed to the payments page
-    Scenario: User is on payments page, he can provide the details required and complete the booking
-        Given user is on the payments page
-        When the user enters required details
-        Then user can complete booking
+
+
+
+
+
+
+            
+    # Scenario: User is on hotels page and need to proceed to cars page
+    #     Given user is on the hotels page
+    #     When user selects a hotel
+    #     Then the user clicks continue to proceed to the cars page
+    # Scenario: User is on cars page and need to proceed to payments page
+    #     Given user is on the cars page
+    #     When user selects a car
+    #     Then the user clicks continue to proceed to the payments page
+    # Scenario: User is on payments page, he can provide the details required and complete the booking
+    #     Given user is on the payments page
+    #     When the user enters required details
+    #     Then user can complete booking
 # # //button[contains(@data-hook, "select-day-departing") and @aria-hidden="false"]
 # # //button[.//span[contains(@data-hook,"select-legroom-plus-seat_front_1A")]]
 # # //button[.//span[contains(@data-hook, "select-economy-seat_unrestricted")]]

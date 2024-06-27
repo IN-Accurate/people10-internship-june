@@ -180,7 +180,6 @@ class Travelers {
   }
 
   async continueToSeatPage() {
-    await browser.pause(3000);
     await this.continueBtn.click();
   }
 
@@ -250,7 +249,7 @@ class Travelers {
         
         if (infantDateOfBirth < maxAllowedDate) {
           dobYear = currentYear -1;
-          while(dobMonth = Math.floor(Math.random() * 12)==currentMonth);
+          wdobMonth = Math.floor(Math.random() * 12);
         
           dobDay = this.generateRandomDay(dobMonth, dobYear);   
         
@@ -303,26 +302,21 @@ class Travelers {
 
   async fillDetails_Adults() {
     await this.fillDetails("adults", no_of_adults);
-    await browser.pause(2000);
   }
 
   async fillDetails_Children() {
     await this.fillDetails("children", no_of_children);
-    await browser.pause(2000);
   }
 
   async fillDetails_Infant_In_Seat() {
     await this.fillDetails("infantsInSeat", no_of_infants_in_seat);
-    await browser.pause(2000);
   }
 
   async fillDetails_Infant_In_Lap() {
     await this.fillDetails("infantsInLap", no_of_infants_in_lap);
-    await browser.pause(2000);
   }
 
   async continueToSeatPage() {
-    await browser.pause(3000);
     await this.continueBtn.click();
   }
 }

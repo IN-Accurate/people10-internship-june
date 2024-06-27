@@ -27,7 +27,7 @@ const searchButton = $('//button[@data-hook="flight-search-submit"]');
 class HomePage {
   async OpenHomePage() {
     await browser.maximizeWindow();
-    await browser.url("https://www.stg01.aws.allegiantair.com/");
+    await browser.url("https://www.allegiantair.com/");
   }
 
   async isCookiesDisplayed() {
@@ -83,7 +83,6 @@ class HomePage {
     const departureBtn = await this.departureDate();
     await departureBtn.waitForClickable();
     await departureBtn.click();
-    await browser.pause(5000);
   }
 
   async provideTravelerDetails(
@@ -101,26 +100,23 @@ class HomePage {
     for (let i = 0; i < no_of_infants_in_lap; i++)
       await infantLapIncrementBtn.click();
 
-    await browser.pause(3000);
   }
 
   async clickContinue() {
     await searchButton.click();
   }
   async departureDate() {
-    let i = 1;
+    let i = 0;
     let currDate = new Date();
-    let currDay = currDate.getDate(); // Get current day of the month
-    let currDayInt = 2; // Start checking from tomorrow's date
+    let currDay = currDate.getDate();
+    let currDayInt = parseInt(currDay);
   
-    // Loop until the button for the desired date is clickable
     while (!(await $(`[data-hook="flight-search-date-picker_calendar-${i}_select-day-${currDayInt}"]`).isClickable())) {
       currDayInt++;
   
-      // Handle switching to the next month if current day exceeds 31
       if (currDayInt > 31) {
-        currDayInt = 1; // Reset to 1 for the next month
-        i++; // Move to the next calendar month
+        currDayInt = 1; 
+        i=(i+1)%2; 
       }
     }
   

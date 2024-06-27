@@ -78,7 +78,6 @@ let bagsRequired = no_of_adults + children + infantsInSeat;
     let continueBtn = await this.continueBtn;
     await continueBtn.waitForClickable();
     await continueBtn.click();
-    await browser.pause(3000);
   };
 }
 
