@@ -1,4 +1,0 @@
-{
-  "using": "css selector",
-  "value": "button[data-hook=\"room-pod_hotel-book-button\"]"
-}

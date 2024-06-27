@@ -1,4 +1,0 @@
-{
-  "using": "css selector",
-  "value": "[data-hook=\"flight-search-date-picker_calendar-0_select-day-20\"]"
-}

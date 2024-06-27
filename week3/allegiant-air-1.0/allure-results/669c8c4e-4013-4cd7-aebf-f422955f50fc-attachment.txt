@@ -1,4 +1,0 @@
-{
-  "using": "css selector",
-  "value": "span[data-hook=\"extras-popup-flight-leg_checkbox-label\"]"
-}

@@ -1,4 +1,0 @@
-{
-  "using": "css selector",
-  "value": "input[data-hook=\"travelers-form_adults_1_first-name\"]"
-}

@@ -1,4 +1,0 @@
-{
-  "using": "css selector",
-  "value": "ul.Section__Seats-noco0i-2.jRWEBs"
-}

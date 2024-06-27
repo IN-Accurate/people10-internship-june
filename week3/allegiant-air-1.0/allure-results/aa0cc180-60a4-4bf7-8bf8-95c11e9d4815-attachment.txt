@@ -1,4 +1,0 @@
-{
-  "using": "css selector",
-  "value": "button[id=\"onetrust-accept-btn-handler\"]"
-}
