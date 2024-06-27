@@ -1,4 +1,0 @@
-{
-  "using": "css selector",
-  "value": "label[data-hook=\"flight-search-trip-type_ONEWAY\"]"
-}
